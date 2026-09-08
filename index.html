@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#061b2a" />
+  <meta name="description" content="Discover Valinokkam — beaches, culture, nature, events and local life in Ramanathapuram, Tamil Nadu." />
+  <title>Valinokkam — Where the Sea Meets Our Village</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+</head>
+<body>
+  <div class="preloader"><div class="loader-ring"></div><span>Discovering Valinokkam</span></div>
+  <div class="noise"></div>
+
+  <header class="nav">
+    <a href="#home" class="brand"><span class="brand-mark">V</span><span>VALINOKKAM</span></a>
+    <button class="menu-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links">
+      <a href="#about">About</a><a href="#explore">Explore</a><a href="#map">Map</a>
+      <a href="#events">Events</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#map">Explore Map <span>↗</span></a>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <div class="eyebrow"><span class="pulse-dot"></span> Ramanathapuram · Tamil Nadu</div>
+        <h1>Where the sea<br><em>meets our village.</em></h1>
+        <p>Discover the coast, culture, people, nature and stories of Valinokkam — a coastal village beside the Gulf of Mannar.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="#explore">Explore Valinokkam <span>↓</span></a>
+          <a class="btn btn-ghost" href="#events">Upcoming Events</a>
+        </div>
+      </div>
+      <div class="hero-bottom">
+        <div><small>LOCATION</small><strong>Valinokkam, Ramanathapuram</strong></div>
+        <div><small>COAST</small><strong>Gulf of Mannar</strong></div>
+        <div><small>KNOWN FOR</small><strong>Sea · Salt · Fishing</strong></div>
+      </div>
+      <div class="scroll-cue"><span></span> Scroll to explore</div>
+    </section>
+
+    <section id="about" class="intro section">
+      <div class="section-kicker">01 · OUR HOME</div>
+      <div class="intro-grid">
+        <div><h2>A small coastal village with a <em>big story.</em></h2></div>
+        <div>
+          <p class="lead">Valinokkam sits on a peninsula along the Gulf of Mannar, where everyday life is closely connected to the sea.</p>
+          <p>Its coastline, fishing activity, salt production, backwater landscapes and community life make it a distinctive part of Ramanathapuram district.</p>
+          <div class="stat-row">
+            <div><strong>1974</strong><span>Salt production began</span></div>
+            <div><strong>Gulf</strong><span>of Mannar coast</span></div>
+            <div><strong>21</strong><span>offshore islands in GoM reserve</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="explore" class="explore section">
+      <div class="section-head">
+        <div><div class="section-kicker">02 · EXPLORE</div><h2>Places worth <em>discovering.</em></h2></div>
+        <p>From wave-washed beaches to working harbours, explore Valinokkam and nearby destinations.</p>
+      </div>
+      <div class="place-grid">
+        <article class="place-card place-large" data-place="beach">
+          <div class="place-image beach-img"></div><div class="place-shade"></div>
+          <div class="place-content"><span>01 · COAST</span><h3>Valinokkam Beach</h3><p>Open sea, breeze and a long coastal horizon.</p><button class="text-btn" onclick="focusPlace('beach')">View on map ↗</button></div>
+        </article>
+        <article class="place-card" data-place="peninsula">
+          <div class="place-image peninsula-img"></div><div class="place-shade"></div>
+          <div class="place-content"><span>02 · NATURE</span><h3>Peninsular Coast</h3><p>Quiet stretches around the village.</p><button class="text-btn" onclick="focusPlace('peninsula')">View on map ↗</button></div>
+        </article>
+        <article class="place-card" data-place="harbour">
+          <div class="place-image harbour-img"></div><div class="place-shade"></div>
+          <div class="place-content"><span>03 · LIFE</span><h3>Old Harbour</h3><p>Fishing boats, repair work and coastal life.</p><button class="text-btn" onclick="focusPlace('harbour')">View on map ↗</button></div>
+        </article>
+        <article class="place-card salt-card">
+          <div class="salt-pattern"></div><div class="place-content dark"><span>04 · HERITAGE</span><h3>The Salt Story</h3><p>Salt production has been part of Valinokkam's modern coastal story since 1974.</p><a class="text-btn dark-btn" href="#about">Discover the story ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="ocean-story">
+      <div class="ocean-copy reveal">
+        <div class="section-kicker light">03 · GULF OF MANNAR</div>
+        <h2>A living blue world<br><em>at our doorstep.</em></h2>
+        <p>The Gulf of Mannar is a marine biodiversity hotspot with coral reefs, seagrass, mangroves and diverse marine life.</p>
+        <a class="btn btn-light" href="#nature">Explore nature <span>↓</span></a>
+      </div>
+      <div class="ocean-orbit"><div class="orbit orbit1"></div><div class="orbit orbit2"></div><div class="orbit-dot">🐚</div></div>
+    </section>
+
+    <section id="nature" class="nature section">
+      <div class="nature-top">
+        <div><div class="section-kicker">04 · NATURE</div><h2>Life beneath<br>the <em>blue.</em></h2></div>
+        <p>The Gulf of Mannar Biosphere Reserve supports exceptional marine and coastal biodiversity. Explore the ecosystem responsibly and leave the coast cleaner than you found it.</p>
+      </div>
+      <div class="nature-grid">
+        <div class="nature-item"><span>🐢</span><h3>Sea Turtles</h3><p>Important marine visitors along the Gulf coast.</p></div>
+        <div class="nature-item"><span>🐬</span><h3>Dolphins</h3><p>Marine mammals recorded across the Gulf.</p></div>
+        <div class="nature-item"><span>🪸</span><h3>Coral Reefs</h3><p>Reef ecosystems are among the Gulf's defining habitats.</p></div>
+        <div class="nature-item"><span>🌿</span><h3>Seagrass</h3><p>Vital coastal habitat supporting marine species.</p></div>
+      </div>
+    </section>
+
+    <section id="map" class="map-section section">
+      <div class="section-head">
+        <div><div class="section-kicker">05 · MAP</div><h2>Find your way<br><em>around Valinokkam.</em></h2></div>
+        <div class="map-controls"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="coast">Coast</button><button class="filter" data-filter="life">Life</button><button class="filter" data-filter="nearby">Nearby</button></div>
+      </div>
+      <div class="map-wrap">
+        <div id="mapCanvas"></div>
+        <aside class="map-panel">
+          <span class="panel-label">SELECTED PLACE</span>
+          <h3 id="mapTitle">Valinokkam Beach</h3>
+          <p id="mapDesc">A coastal viewpoint and local gathering place along the Gulf of Mannar.</p>
+          <div class="coord" id="mapCoord">Valinokkam · Tamil Nadu</div>
+          <a id="directions" class="btn btn-dark" target="_blank" rel="noopener">Get directions ↗</a>
+        </aside>
+      </div>
+    </section>
+
+    <section id="events" class="events section">
+      <div class="section-head">
+        <div><div class="section-kicker">06 · COMMUNITY</div><h2>What's happening<br><em>in Valinokkam?</em></h2></div>
+        <button class="btn btn-dark" onclick="openEventModal()">+ Add event</button>
+      </div>
+      <div class="event-tabs"><button class="event-tab active" data-cat="all">All</button><button class="event-tab" data-cat="culture">Culture</button><button class="event-tab" data-cat="sports">Sports</button><button class="event-tab" data-cat="community">Community</button><button class="event-tab" data-cat="nature">Nature</button></div>
+      <div id="eventGrid" class="event-grid"></div>
+      <div class="empty-events" id="emptyEvents">No verified upcoming events yet. Add a local event to get started.</div>
+    </section>
+
+    <section id="gallery" class="gallery section">
+      <div class="section-head">
+        <div><div class="section-kicker">07 · GALLERY</div><h2>See Valinokkam<br><em>through local eyes.</em></h2></div>
+        <p>Coastlines, boats, salt pans, sunsets and everyday village moments.</p>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item g1"><img src="assets/gallery/coastal-sunset-enhanced.png" alt="Valinokkam coast at golden hour" loading="lazy"><figcaption>Golden coast</figcaption></figure>
+        <figure class="gallery-item g2"><img src="assets/gallery/beach-community.jpg" alt="Local fishing activity on Valinokkam beach" loading="lazy"><figcaption>Life by the shore</figcaption></figure>
+        <figure class="gallery-item g3"><img src="assets/gallery/beach-mosque.jpg" alt="Beachside mosque in Valinokkam" loading="lazy"><figcaption>Beachside heritage</figcaption></figure>
+        <figure class="gallery-item g4"><img src="assets/gallery/mosque-gate.jpg" alt="Local mosque entrance and flag" loading="lazy"><figcaption>Local landmarks</figcaption></figure>
+        <figure class="gallery-item g5"><img src="assets/gallery/waves-rocks.jpg" alt="Waves breaking over the coastal rocks" loading="lazy"><figcaption>Waves &amp; rocks</figcaption></figure>
+        <figure class="gallery-item g6"><img src="assets/gallery/fishing-boats.jpg" alt="Fishing boats along the Valinokkam coast" loading="lazy"><figcaption>Fishing waters</figcaption></figure>
+        <figure class="gallery-item g7"><img src="assets/gallery/dune-coast.jpg" alt="Coastal dunes and beach grass" loading="lazy"><figcaption>Sand dunes</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="responsible section">
+      <div class="responsible-card">
+        <div><span class="section-kicker light">08 · TAKE CARE</span><h2>Love the coast.<br><em>Leave no trace.</em></h2></div>
+        <div class="care-list"><div><b>01</b><span>Carry your waste back.</span></div><div><b>02</b><span>Respect fishing activity and local livelihoods.</span></div><div><b>03</b><span>Don't disturb wildlife or coral habitats.</span></div><div><b>04</b><span>Support local businesses and communities.</span></div></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section">
+      <div class="section-kicker">09 · VALINOKKAM</div>
+      <h2>Know a place.<br>Know an event.<br><em>Share the story.</em></h2>
+      <p>This community website is designed to grow with Valinokkam. Add verified places, local events, photographs and stories.</p>
+      <div class="hero-actions"><button class="btn btn-dark" onclick="openEventModal()">Submit an event</button><a class="btn btn-outline" href="#gallery">Explore gallery</a></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><span class="brand-mark">V</span><strong>VALINOKKAM</strong><small>Where the sea meets our village.</small></div>
+    <div class="footer-links"><a href="#about">About</a><a href="#explore">Places</a><a href="#events">Events</a><a href="#map">Map</a><a href="#gallery">Gallery</a></div>
+    <div class="footer-note">Made for Valinokkam · Ramanathapuram · Tamil Nadu</div>
+    <div>
+      <h3>About us</h3>
+      <p>Contact: +91 6385601811</p>
+      <p>Gmail: mohamedsharukkhan63@gmail.com</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="eventModal" aria-hidden="true">
+    <div class="modal-backdrop" onclick="closeEventModal()"></div>
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeEventModal()">×</button>
+      <span class="section-kicker">COMMUNITY EVENT</span><h2>Add an event</h2>
+      <form id="eventForm">
+        <label>Event name<input name="name" required placeholder="e.g. Village Sports Day"></label>
+        <div class="two-col"><label>Date<input type="date" name="date" required></label><label>Category<select name="category"><option value="community">Community</option><option value="culture">Culture</option><option value="sports">Sports</option><option value="nature">Nature</option></select></label></div>
+        <label>Location<input name="location" required placeholder="e.g. Valinokkam Beach"></label>
+        <label>Description<textarea name="description" rows="3" placeholder="Tell visitors what is happening..."></textarea></label>
+        <button class="btn btn-dark full" type="submit">Save event</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Event added locally.</div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>
