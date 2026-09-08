@@ -5,23 +5,6 @@
 }
 
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);overflow-x:hidden}
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-}
-
-.brand img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-}
-
-.brand span {
-    font-size: 1.2rem;
-    font-weight: 700;
-}
 .noise{position:fixed;inset:0;z-index:50;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E")}
 .preloader{position:fixed;inset:0;z-index:100;background:var(--deep);color:white;display:grid;place-items:center;align-content:center;gap:18px;transition:.7s ease}.preloader.hide{opacity:0;visibility:hidden}.loader-ring{width:42px;height:42px;border:2px solid rgba(255,255,255,.2);border-top-color:var(--cyan);border-radius:50%;animation:spin 1s linear infinite}.preloader span{font-size:12px;letter-spacing:.18em;text-transform:uppercase}
 @keyframes spin{to{transform:rotate(360deg)}}@keyframes float{50%{transform:translateY(-12px)}}@keyframes drift{50%{transform:translateX(20px) translateY(-8px)}}
